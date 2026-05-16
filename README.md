@@ -50,11 +50,24 @@ cd ev-charging
 🔹 2. Install dependencies
 npm install
 
-🔹 6. Run locally
+🔹 3. Create environment variables
+
+Create a `.env` file with:
+
+VITE_SUPABASE_URL=your-supabase-project-url
+VITE_SUPABASE_ANON_KEY=your-supabase-anon-key
+
+For Vercel, add the same two variables in the project settings under Environment Variables.
+
+🔹 4. Run locally
 npm run dev
 
 Then open:
 http://localhost:5173
+
+🔹 5. Deploy to Vercel
+
+The app is configured as a Vite SPA. `vercel.json` includes a rewrite so routes like `/login` and `/book` work on direct refresh in production.
 
 
 
